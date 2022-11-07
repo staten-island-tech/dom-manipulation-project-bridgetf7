@@ -1,0 +1,28 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>DOM Manipulation</title>
+</head>
+
+<body>
+    <div id="box">
+        <h1>What is Your Chinese Zodiac?</h1>
+        <div class="inputs">
+            <form id="form" name="form">
+                <label for="birthYear">Please input your birth year:</label>
+                <input type="text" class="input" id="birthYear" name="birthYear"><br><br>
+            </form>
+        </div>
+        <div class="buttons">
+            <button type="button" id="submit" onClick="submitform()">Submit</button>
+            <button type="button" id="reset" value="reset" onClick="resetform()">Clear Form</button>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
