@@ -1,11 +1,19 @@
 const DOMSelectors = {
     birthYear: document.getElementById("birthYear"),
-    buttons: document.querySelector(".buttons"),
+    submit: document.getElementById("submit"),
+    reset: document.getElementById("reset"),
 };
 
 console.log(DOMSelectors);
 
+DOMSelectors.submit.addEventListener("click", function () {
+
+}
+
 
 function resetform() {
-    document.getElementById("form").reset();
-}
+        document.getElementById("form").reset();
+    }
+
+
+
