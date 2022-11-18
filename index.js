@@ -1,4 +1,5 @@
 const DOMSelectors = {
+<<<<<<< HEAD
     box: document.getElementById("box"),
     inputs: document.getElementById("inputs"),
     albumName: document.getElementById("albumName"),
@@ -37,3 +38,7 @@ DOMSelectors.submit.addEventListener("click", function () {
 
 
 
+=======
+  
+}
+>>>>>>> d36af4020a9d400ebb4c4aa9cdbef76d4bab81d0
