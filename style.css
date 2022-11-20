@@ -1,0 +1,22 @@
+html,
+body,
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+body {
+    text-align: center;
+    background-color: #d6def0;
+}
+
+h1 {
+    text-align: center;
+    font-size: 12rem;
+    padding: 5rem;
+    color: #f7f8f2;
+    font-style: italic;
+    letter-spacing: 0.5rem;
+}
