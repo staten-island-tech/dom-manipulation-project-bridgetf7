@@ -26,7 +26,7 @@ DOMSelectors.submit.addEventListener("click", function (e) {
      <div id = "outputParent">
      <div id = "outputCard"> 
      <p>${albumName}</p> 
-     <p class=image ><img src= ${image}><br><br> 
+     <p class=image><img src= ${image}><br><br> 
      <p>${artistName}</p> 
      <button type="button" id="clear">clear</button>
      </div>
