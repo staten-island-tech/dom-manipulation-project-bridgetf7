@@ -22,11 +22,14 @@ DOMSelectors.submit.addEventListener("click", function (e) {
     //outputs a card when submit button is hit 
     DOMSelectors.box.insertAdjacentHTML(
         "beforeend",
-        `<div id = "outputCard"> 
+        `
+       <div id = "outputParent">
+       <div id = "outputCard"> 
        <p>${albumName}</p> 
-       <p><img src= ${image}></p> 
+       <p class=image ><img src= ${image}><br><br> 
        <p>${artistName}</p> 
        <button type="button" id="clear">clear</button>
+       </div>
        </div>`
     );
 
