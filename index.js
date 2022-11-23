@@ -10,8 +10,7 @@ const DOMSelectors = {
 console.log(DOMSelectors)
 
 //does something when the "submit" button is hit
-DOMSelectors.submit.addEventListener("click", function (e) {
-  e.preventDefault();
+DOMSelectors.submit.addEventListener("click", function () {
 
   //provides the values for inputs 
   const albumName = DOMSelectors.albumName.value;
