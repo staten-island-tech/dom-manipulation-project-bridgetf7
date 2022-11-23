@@ -44,3 +44,5 @@ DOMSelectors.submit.addEventListener("click", function () {
       outputCard.remove();
   });
 });
+
+//https://www.geeksforgeeks.org/how-to-clear-the-content-of-a-div-using-javascript/
