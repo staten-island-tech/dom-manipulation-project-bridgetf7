@@ -6,15 +6,20 @@ const DOMSelectors = {
     image: document.querySelector("#image"),
     form: document.getElementById("form"),
 };
-
 console.log(DOMSelectors);
 
 DOMSelectors.submit.addEventListener("click", function (e) {
     e.preventDefault();
+    result();
+    clearInputs();
+    clearResult();
+});
+
+
+function result() {
     let albumName = DOMSelectors.albumName.value;
     let artistName = DOMSelectors.artistName.value;
     let image = DOMSelectors.image.value;
-
     DOMSelectors.box.insertAdjacentHTML(
         "afterend",
         `
@@ -28,15 +33,19 @@ DOMSelectors.submit.addEventListener("click", function (e) {
    </section>
    `
     );
+}
 
+function clearInputs() {
     DOMSelectors.albumName.value = "";
     DOMSelectors.artistName.value = "";
     DOMSelectors.image.value = "";
+}
 
+function clearResult() {
     const result = document.getElementById("result");
     const clear = document.getElementById("clear");
     clear.addEventListener("click", function () {
         result.remove();
     });
+}
 
-});
