@@ -1,11 +1,12 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Manipulation</title>
     <link rel="stylesheet" href="style.css" />
-    <title>Album Builder</title>
     <!-- font links -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -15,26 +16,35 @@
 
 
 <body>
+    <section id="container">
+        <h1>create an album cover :)</h1>
 
-    <h1>create a music album :)</h1>
+        <form id="form">
 
-    <form id="form">
+            <div class="inputs">
 
-        <div id="box">
-            <div id="inputs">
-                <label for="albumName">album name:</label>
-                <input type="text" class="input" id="albumName" <br><br>
-                <label for="artistName">artist's name:</label>
-                <input type="text" class="input" id="artistName" <br><br>
-                <label for="imageURL">insert image URL:</label>
-                <input type="url" class="input" id="imageURL" <br><br>
-            </div>
+                <div class="input">
+                    <label for="albumName">album name: </label>
+                    <input type="text" id="albumName" class="textInput" />
+                </div>
 
-            <div id="buttons">
-                <button type="button" id="submit">submit</button>
-            </div>
+                <div class="input">
+                    <label for="artistName">artist's name: </label>
+                    <input type="text" id="artistName" class="textInput" />
+                </div>
 
-    </form>
+                <div class="input">
+                    <label for="image">insert URL of album cover:</label>
+                    <input type="url" id="image" class="imageInput" />
+                </div>
+
+
+                <div class="submitInputs">
+                    <button type="button" class="buttons" id="submit">submit</button>
+                </div>
+
+        </form>
+    </section>
 
     <script src="index.js"></script>
 </body>

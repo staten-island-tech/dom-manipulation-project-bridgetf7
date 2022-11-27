@@ -12,6 +12,7 @@ body {
     background-color: #92a3c9;
 }
 
+
 h1 {
     text-align: center;
     font-size: 4rem;
@@ -22,14 +23,29 @@ h1 {
     font-family: 'Playfair Display', serif;
 }
 
-#inputs {
-    font-size: 3rem;
+.inputs {
+    font-size: 5rem;
     font-family: 'Playfair Display', serif;
     letter-spacing: 0.1rem;
     color: #f7f8f2;
 }
 
-button {
+.outputCard {
+    background-color: white;
+    border: 0.625rem solid #b6c3e1;
+    border-radius: 5%;
+    min-width: 5%;
+    max-width: 100%;
+    height: 40rem;
+    width: 40rem;
+    margin: 2rem;
+    padding: 1.25rem;
+    font-size: 4rem;
+    font-family: 'Playfair Display', serif;
+    display: inline-block
+}
+
+.buttons {
     font-size: 1.5rem;
     font-family: 'Playfair Display', serif;
     letter-spacing: 0.1rem;
@@ -41,26 +57,4 @@ button {
     border: 0.03rem solid black;
     width: 8rem;
     height: 3rem;
-}
-
-#outputCard {
-    background-color: white;
-    border: 0.625rem solid #b6c3e1;
-    border-radius: 5%;
-    min-width: 5%;
-    max-width: 100%;
-    height: 40rem;
-    width: 35rem;
-    margin: 2rem;
-    padding: 1.25rem;
-    text-align: center;
-    font-size: 4rem;
-    font-family: 'Playfair Display', serif;
-}
-
-
-.image {
-    height: 15rem;
-    align-items: center;
-    margin: 1rem;
 }
