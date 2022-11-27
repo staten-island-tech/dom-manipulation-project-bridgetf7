@@ -1,10 +1,10 @@
 const DOMSelectors = {
-    submit: document.getElementById("submit"),
     box: document.getElementById("container"),
-    albumName: document.querySelector("#albumName"),
-    artistName: document.querySelector("#artistName"),
-    image: document.querySelector("#image"),
     form: document.getElementById("form"),
+    albumName: document.getElementById("albumName"),
+    artistName: document.getElementById("artistName"),
+    image: document.getElementById("image"),
+    submit: document.getElementById("submit"),
 };
 console.log(DOMSelectors);
 
