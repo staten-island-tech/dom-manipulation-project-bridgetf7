@@ -1,48 +1,51 @@
 const DOMSelectors = {
-  box: document.getElementById("box"),
-  inputs: document.getElementById("inputs"),
+  box: document.getElementById("container"),
+  form: document.getElementById("form"),
   albumName: document.getElementById("albumName"),
   artistName: document.getElementById("artistName"),
-  buttons: document.getElementById("buttons"),
+  image: document.getElementById("image"),
   submit: document.getElementById("submit"),
-  image: document.getElementById("imageURL")
 };
-console.log(DOMSelectors)
+console.log(DOMSelectors);
 
-//does something when the "submit" button is hit
-DOMSelectors.submit.addEventListener("click", function () {
+DOMSelectors.submit.addEventListener("click", function (e) {
+  e.preventDefault();
+  result();
+  clearInputs();
+  clearResult();
+});
 
-  //provides the values for inputs 
-  const albumName = DOMSelectors.albumName.value;
-  const artistName = DOMSelectors.artistName.value;
-  const image = DOMSelectors.image.value;
 
-
-  //outputs a card when submit button is hit 
+function result() {
+  let albumName = DOMSelectors.albumName.value;
+  let artistName = DOMSelectors.artistName.value;
+  let image = DOMSelectors.image.value;
   DOMSelectors.box.insertAdjacentHTML(
-      "beforeend",
+      "afterend",
       `
-     <div id = "outputParent">
-     <div id = "outputCard"> 
-     <p>${albumName}</p> 
-     <p class=image><img src= ${image}><br><br> 
-     <p>${artistName}</p> 
-     <button type="button" id="clear">clear</button>
-     </div>
-     </div>`
+  <section id="result">
+  <div class="outputCard">
+  <p>${albumName}</p>
+  <p><img src=${image}></p>
+  <p>${artistName}</p>
+  <button class="buttons" id="clear">clear</button>
+  </div>
+ </section>
+ `
   );
+}
 
-  //clears input values on form
+function clearInputs() {
   DOMSelectors.albumName.value = "";
   DOMSelectors.artistName.value = "";
   DOMSelectors.image.value = "";
+}
 
-  //clears result 
-  const clear = document.getElementById("clear");
-  const outputCard = document.getElementById("outputCard");
-  clear.addEventListener("click", function () {
-      outputCard.remove();
+function clearResult() {
+  let clear = document.querySelectorAll("#clear")
+  clear.forEach((button)=> {
+    button.addEventListener("click", (event)=> {
+      event.target.parentElement.remove();
+    });
   });
-});
-
-//https://www.geeksforgeeks.org/how-to-clear-the-content-of-a-div-using-javascript/
+}
